@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/favicon.ico">
+    
+
+    <title>
+        
+          hostname的问题 - 小白二号
+        
+    </title>
+
+    <!-- Spectre.css framework (v0.5.8) -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <!-- Noto Sans SC -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet">
+    <!-- Noto Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <!-- theme css & js -->
+    <link rel="stylesheet" href="/css/spectre_custom.css">
+    <link rel="stylesheet" href="/css/book.css">
+    <script src="/js/book.js"></script>
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+</head>
+
+<body>
+
+<div class="container">
+  <div class="book-container">
+    <div class="columns">
+      <div class="column col-2 hide-lg">
+        <div class="book-sidebar">
+  <h4 class="site-meta">
+    <a href="/">小白二号</a>
+  </h4>
+  <div class="sidebar-content">
+    <ul>
+<li><a href="/">首页</a></li>
+<li>算法
+<ul>
+<li><a href="/%E6%B1%82%E8%A7%A3%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E7%9A%84%E7%AC%ACn%E9%A1%B9">求解斐波那契数列的第n项</a></li>
+<li><a href="/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92">动态规划</a></li>
+<li><a href="/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2">记忆化搜索</a></li>
+<li><a href="/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F">拓扑排序</a></li>
+<li><a href="/%E7%90%86%E8%A7%A3%E9%80%92%E5%BD%92">理解递归</a></li>
+<li><a href="/%E7%90%86%E8%A7%A3%E5%87%BD%E6%95%B0">理解函数</a></li>
+</ul>
+</li>
+<li>大数据
+<ul>
+<li><a href="/hostname%E7%9A%84%E9%97%AE%E9%A2%98">hostname的问题</a></li>
+<li><a href="/hadoop%E6%90%AD%E5%BB%BA%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94ssh%E9%97%AE%E9%A2%98">hadoop搭建入门——ssh问题</a></li>
+<li><a href="/%E7%94%A8mapreduce%E5%AE%9E%E7%8E%B0join">用mapreduce实现join</a></li>
+<li><a href="/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%BB%E5%8A%A1%E5%88%86%E5%8F%91%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98">分布式任务分发引发的问题</a></li>
+<li><a href="/%E5%A4%9A%E7%BB%B4%E6%9F%A5%E8%AF%A2%E7%9A%84%E4%B8%80%E7%A7%8D%E5%AE%9E%E7%8E%B0cube%E5%8C%96">多维查询的一种实现cube化</a></li>
+<li><a href="/xxx">xxx</a></li>
+</ul>
+</li>
+<li>笔试题</li>
+<li>草稿</li>
+</ul>
+
+  </div>
+</div>
+
+<script src="/js/book-sidebar.js"></script>
+      </div>
+
+      <div class="column col-8 col-lg-12">
+        <div class="book-content">
+          <div class="book-navbar">
+  <header class="navbar">
+  <section class="navbar-section">
+    <img class="navbar-icon" src="/favicon.ico">
+  </section>
+  <section class="navbar-center">
+    小白二号
+  </section>
+  <section class="navbar-section">
+    <label class="accordion-header c-hand" for="accordion-sidebar">
+      <i class="icon icon-menu"></i>
+    </label>
+  </section>
+</header>
+
+<div class="accordion">
+  <input type="checkbox" id="accordion-sidebar" name="accordion-checkbox" hidden>
+  <div class="accordion-body">
+    <ul>
+<li><a href="/">首页</a></li>
+<li>算法
+<ul>
+<li><a href="/%E6%B1%82%E8%A7%A3%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E7%9A%84%E7%AC%ACn%E9%A1%B9">求解斐波那契数列的第n项</a></li>
+<li><a href="/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92">动态规划</a></li>
+<li><a href="/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2">记忆化搜索</a></li>
+<li><a href="/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F">拓扑排序</a></li>
+<li><a href="/%E7%90%86%E8%A7%A3%E9%80%92%E5%BD%92">理解递归</a></li>
+<li><a href="/%E7%90%86%E8%A7%A3%E5%87%BD%E6%95%B0">理解函数</a></li>
+</ul>
+</li>
+<li>大数据
+<ul>
+<li><a href="/hostname%E7%9A%84%E9%97%AE%E9%A2%98">hostname的问题</a></li>
+<li><a href="/hadoop%E6%90%AD%E5%BB%BA%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94ssh%E9%97%AE%E9%A2%98">hadoop搭建入门——ssh问题</a></li>
+<li><a href="/%E7%94%A8mapreduce%E5%AE%9E%E7%8E%B0join">用mapreduce实现join</a></li>
+<li><a href="/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%BB%E5%8A%A1%E5%88%86%E5%8F%91%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98">分布式任务分发引发的问题</a></li>
+<li><a href="/%E5%A4%9A%E7%BB%B4%E6%9F%A5%E8%AF%A2%E7%9A%84%E4%B8%80%E7%A7%8D%E5%AE%9E%E7%8E%B0cube%E5%8C%96">多维查询的一种实现cube化</a></li>
+<li><a href="/xxx">xxx</a></li>
+</ul>
+</li>
+<li>笔试题</li>
+<li>草稿</li>
+</ul>
+
+  </div>
+</div>
+</div>
+
+<div class="book-post">
+  <p>今天来说说关于hostname的问题。</p>
+<p>我们知道，kafka和hbase都是通过zookeeper来保存元数据，当我们要访问kafka时，首先要通过zookeeper查询到kafka的机器，再通过查询到的机器信息连接到相应的机器上获取数据。而记录在zookeeper的机器地址，就是hostname。</p>
+<h3 id="如何使kafka既能够外网访问又能够内网访问呢？">如何使kafka既能够外网访问又能够内网访问呢？</h3>
+<p>刚才提到，我们首先连接的是zookeeper查询kafka的机器地址，如果需要内网访问，只需要在访问机器上绑定kafka机器的内网地址，如果需要外网访问，只需要在访问机器上绑定kafka机器的外网地址</p>
+<h3 id="hbase-client连接直接卡住">hbase client连接直接卡住</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">configuration.set(&quot;hbase.zookeeper.quorum&quot;, &quot;192.168.1.100&quot;); </span><br><span class="line">HBaseAdmin hBaseAdmin = new HBaseAdmin(configuration);</span><br></pre></td></tr></table></figure>
+<p>初学者在使用hbase，常常会出现连接卡住的情况。如果打开debug日志，就会发现连接的过程中抛出很多异常。其中问题大多数是hostname无法识别。hbase连接抛出异常之时，是打debug日志的，hbase会一直重试，在不开debug日志的情况下，就像是卡住一般。</p>
+<p>很多初学者以为代码中只需要连接zookeeper，就只设置zookeeper的hostname对应关系。其实hbase的所有机器，都需要加上host</p>
+<h3 id="hdfs的简单原理">hdfs的简单原理</h3>
+<p>hdfs的namenode负责元数据，datanode负责数据，当客户端需要获得某一个路径的数据时，先连接namenode，查询该路径的元数据信息，得知数据有多少个block，这些block分别在哪些机器上。客户端取得这些信息之后，自行去连接数据所在的datanode获取数据。</p>
+<p>同样的，hdfs所有的机器都需要跟客户端连接，因此客户端所在的机器一定要能访问hdfs的所有机器。如果只开通namenode的外网连接，而不开通datanode的外网连接，hdfs是无法外网访问的。</p>
+<h3 id="如何加host">如何加host</h3>
+<ul>
+<li>搭建DNS服务</li>
+<li>修改本地的/etc/hosts文件</li>
+</ul>
+
+</div>
+
+
+  <div class="book-comments">
+    
+
+
+  </div>
+
+
+<script src="/js/book-post.js"></script>
+        </div>
+      </div>
+
+      <div class="column col-2 hide-lg">
+        <div class="book-toc">
+  <div class="book-tocbot">
+  </div>
+  <div class="book-tocbot-menu">
+    <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
+    <a onclick="go_top()">Back to top</a>
+    <a onclick="go_bottom()">Go to bottom</a>
+  </div>
+</div>
+
+<script>
+tocbot.init({
+  tocSelector: '.book-tocbot',
+  contentSelector: '.book-post',
+  headingSelector: 'h1, h2, h3, h4, h5',
+  collapseDepth: 2,
+  orderedList: false,
+  scrollSmooth: false,
+});
+
+function expand_toc(){
+  var b = document.querySelector(".book-toc-expand");
+  tocbot.init({
+    tocSelector: '.book-tocbot',
+    contentSelector: '.book-post',
+    headingSelector: 'h1, h2, h3, h4, h5',
+    collapseDepth: 6,
+    orderedList: false,
+    scrollSmooth: false,
+  });
+  b.setAttribute("onclick", "collapse_toc()");
+  b.innerHTML = "Collapse all"
+}
+
+function collapse_toc(){
+  var b = document.querySelector(".book-toc-expand");
+  tocbot.init({
+    tocSelector: '.book-tocbot',
+    contentSelector: '.book-post',
+    headingSelector: 'h1, h2, h3, h4, h5',
+    collapseDepth: 2,
+    orderedList: false,
+    scrollSmooth: false,
+  });
+  b.setAttribute("onclick", "expand_toc()");
+  b.innerHTML = "Expand all"
+}
+
+function go_top() {
+  window.scrollTo(0, 0);
+}
+
+function go_bottom() {
+  window.scrollTo(0, document.body.scrollHeight);
+}
+
+</script>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

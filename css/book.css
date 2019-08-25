@@ -1,8 +1,13 @@
 .container {
-  height: 100%; }
+  height: 100%;
+  padding: 0px 0px 0px 0px; }
 
 .columns {
   height: 100%; }
+
+.column {
+  padding-left: 0px;
+  padding-right: 0px; }
 
 html, body {
   height: 100%;
@@ -21,13 +26,7 @@ img {
 
 .book-container {
   height: 100%;
-  font-family: 'Noto Sans TC', 'Noto Sans SC', 'Noto Sans', sans-serif; }
-  @media all and (min-width: 960px) {
-    .book-container {
-      padding: 1rem 2rem; } }
-  @media all and (max-width: 959px) {
-    .book-container {
-      padding: 0 1rem; } }
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
 
 .book-content a {
   color: #004ed0; }
@@ -37,7 +36,9 @@ img {
 
 .book-content {
   margin-top: 0.5rem;
-  margin-left: 0.5rem; }
+  margin-left: 0.5rem;
+  max-width: 800px;
+  margin: 0 auto; }
 
 .home-post-title h3 {
   font-size: 1rem;
@@ -293,8 +294,14 @@ img {
     .book-toc .book-tocbot-menu a:hover {
       color: gray; }
 
+.book-sidebar-wraper {
+  background: #fafafa;
+  padding-left: 2em;
+  height: 100%;
+  font-size: 14px; }
+
 .book-sidebar .site-meta {
-  margin: 0.5rem 0 0.875rem 0; }
+  padding: 0.75rem 0 0.875rem 0; }
   .book-sidebar .site-meta a {
     color: #2f2f2f; }
   .book-sidebar .site-meta a:hover {
@@ -307,7 +314,7 @@ img {
     list-style: none;
     margin-left: 0; }
     .book-sidebar .sidebar-content ul ul {
-      margin: 0 0 0 .5rem; }
+      margin: 0 0 0 1rem; }
   .book-sidebar .sidebar-content .icon {
     vertical-align: unset; }
 

@@ -36,11 +36,18 @@ img {
 .book-content a:hover {
   color: #6d6d6d; }
 
-.book-content .content-title {
-  margin-top: 1.275em;
-  margin-bottom: .85em;
-  font-weight: 700;
-  font-size: 2em; }
+@media all and (min-width: 960px) {
+  .book-content .content-title .title {
+    margin-top: 1.275em;
+    margin-bottom: .85em;
+    font-weight: 700;
+    font-size: 2em; } }
+
+@media all and (max-width: 959px) {
+  .book-content .content-title .title {
+    margin: 1.275em auto .85em auto;
+    font-weight: 700;
+    font-size: 1.5em; } }
 
 .book-content {
   padding-right: 1rem;

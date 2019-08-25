@@ -34,6 +34,12 @@ img {
 .book-content a:hover {
   color: #6d6d6d; }
 
+.book-content .content-title {
+  margin-top: 1.275em;
+  margin-bottom: .85em;
+  font-weight: 700;
+  font-size: 2em; }
+
 .book-content {
   margin-top: 0.5rem;
   margin-left: 0.5rem;

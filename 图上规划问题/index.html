@@ -11,7 +11,7 @@
 
     <title>
         
-          拓扑排序 - 小白二号
+          图上规划问题 - 小白二号
         
     </title>
 
@@ -150,22 +150,21 @@
 
 <div class="content-title">
   <div class="title">
-    拓扑排序
+    图上规划问题
   </div>
 </div>
 
 <div class="book-post">
-  <p>推荐读本《图算法》</p>
-<h3 id="拓扑排序">拓扑排序</h3>
-<p>拓扑排序是一种应用广泛的图算法，通常见于任务DAG图的执行排序，由于任务图有依赖，必须优先执行上游任务再逐步解锁下游任务，因此执行顺序至关重要。<br>
-拓扑排序主要思想是：</p>
+  <h3 id="背景">背景</h3>
+<p>先前我一直以为狄利克雷算法的最短路是动态规划，经过这几个星期思考，动态规划的本质，我发现，把最短路归为动态规划似乎是不对的。<br>
+首先，最短路问题没有规划顺序。所有的规划节点都要等到新的一轮判断当前未规划节点的最短路的最小值来决定规划顺序<br>
+其次，当我加入一个新节点，我无法忽略原先的节点而根据现有的状态来推出新的最短路。也就是说，无法忽略原来的节点来进行新的规划。</p>
+<p>对比一下bfs，狄利克雷最短路算法，prime最小生成树算法，最大流算法，他们都有这几个共同的特点</p>
 <ul>
-<li>访问入度为0的点（访问没有上游任务依赖的节点）</li>
-<li>将下游的依赖点入度减1（下游任务检测到一个依赖任务已经完成）</li>
-<li>循环前面两个步骤，直到所有点都被访问</li>
+<li>无法增量计算</li>
+<li>有个明显的切面，用来区分已规划节点和未规划节点</li>
+<li>通过切面上节点的转移，形成状态的转移</li>
 </ul>
-<p><img src="https://yudaer.oss-cn-hangzhou.aliyuncs.com/pic/12.png" alt="示例"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">public static class Node &#123;</span><br><span class="line">    List&lt;Node&gt; children;</span><br><span class="line">&#125;</span><br><span class="line">public static List&lt;Node&gt; topsort(List&lt;Node&gt; nodes) &#123;</span><br><span class="line">    List&lt;Node&gt; result = new ArrayList&lt;Node&gt;();//已经排好序的列表</span><br><span class="line">    Map&lt;Node, Integer&gt; num_parent = new HashMap&lt;Node, Integer&gt;();//上游点的个数</span><br><span class="line">    for (Node node : nodes) &#123;</span><br><span class="line">        if (!num_parent.containsKey(node)) &#123;</span><br><span class="line">            num_parent.put(node, 0);</span><br><span class="line">        &#125;</span><br><span class="line">        for (Node child : node.children) &#123;</span><br><span class="line">            //对每个下游，累加，如果node数据结构有指向上游节点的引用，就不用这么计算</span><br><span class="line">            num_parent.compute(child, new BiFunction&lt;Node, Integer, Integer&gt;() &#123;</span><br><span class="line">                public Integer apply(Node node, Integer number) &#123;</span><br><span class="line">                    if (number == null) &#123;</span><br><span class="line">                        return 1;</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        return number + 1;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    Queue&lt;Node&gt; ready = new ArrayDeque&lt;Node&gt;();</span><br><span class="line">    for (Node node : nodes) &#123;</span><br><span class="line">        //第一轮没有上游节点的节点，可以优先计算</span><br><span class="line">        if (num_parent.get(node) == 0) &#123;</span><br><span class="line">            ready.add(node);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    while (!ready.isEmpty()) &#123;</span><br><span class="line">        //execute(ready);  这里可以多个节点一起取，这些节点是没有互相之间的依赖，可以以任意顺序访问</span><br><span class="line">        Node current = ready.poll();</span><br><span class="line">        result.add(current);</span><br><span class="line">        for (Node child : current.children) &#123;</span><br><span class="line">            num_parent.compute(child, new BiFunction&lt;Node, Integer, Integer&gt;() &#123;</span><br><span class="line">                public Integer apply(Node node, Integer number) &#123;</span><br><span class="line">                    return number - 1;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">            if (num_parent.get(child) == 0) &#123;</span><br><span class="line">                ready.add(child);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 </div>
 

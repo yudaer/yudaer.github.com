@@ -54,7 +54,7 @@
     <div class="columns">
       <div class="column col-2 hide-lg">
         <div class="book-sidebar-wraper">
-  <img src="http://47.244.46.64:8001/1.png" />
+  <img src="http://47.244.46.64:8001/1.png" style="display: none"/>
   <div class="book-sidebar">
     <h4 class="site-meta">
       <a href="/">小白二号</a>
@@ -164,11 +164,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">度度熊迷路了它想返回它的公司，它现在在1号点，它的公司在n号点。度度熊所在的城市由n个点和m条边组成，因为度度熊走了一天很累，它还有走两条边的体力，度度熊想知道他能否回到公司呢？</span><br><span class="line"></span><br><span class="line">数据范围：n &lt;= 2 * 10^5，m &lt;= 10^5</span><br></pre></td></tr></table></figure>
 <p>标签：集合并</p>
 <h4 id="度度熊的机房">度度熊的机房</h4>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">度度熊的公司里分布着N间机房，机房由数字1,2,3,...,N标号，机房间有M条数据线连接，每条数据线有两个属性：老化指数a，拥挤指数b</span><br><span class="line">处于经费的考虑，度度熊决定关闭部分数据线，但是必须保证任意两件机房通过数据线直接或者间接连通以便传输数据。</span><br><span class="line">我们定义Ma为所有未关闭的数据线老化指数的最大值，Mb为所有未关闭的数据线拥挤指数的最大值，求下面式子K的最小值。</span><br><span class="line">Fa和Fb都是常数</span><br><span class="line"></span><br><span class="line">数据范围：N &lt;= 400, M &lt;= 50000</span><br></pre></td></tr></table></figure>
-<p class="katex-block katex-error" title="ParseError: KaTeX parse error: Can&#039;t use function &#039;$&#039; in math mode at position 1: $̲
-K = Fa * Ma + …">$
-K = Fa * Ma + Fb * Mb
-$</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">度度熊的公司里分布着N间机房，机房由数字1,2,3,...,N标号，机房间有M条数据线连接，每条数据线有两个属性：老化指数a，拥挤指数b</span><br><span class="line">处于经费的考虑，度度熊决定关闭部分数据线，但是必须保证任意两件机房通过数据线直接或者间接连通以便传输数据。</span><br><span class="line">我们定义Ma为所有未关闭的数据线老化指数的最大值，Mb为所有未关闭的数据线拥挤指数的最大值，求下面式子K的最小值。</span><br><span class="line">K = Fa * Ma + Fb * Mb</span><br><span class="line">Fa和Fb都是常数</span><br><span class="line"></span><br><span class="line">数据范围：N &lt;= 400, M &lt;= 50000</span><br></pre></td></tr></table></figure>
 <p>标签：最小生成树，破圈法</p>
 <h4 id="度度熊的数学题">度度熊的数学题</h4>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">牛牛给度度出了一个数学题，牛牛给定数字n，m，k，希望度度熊能找到一组非负整数a，b，满足(n-a)(m-b)&lt;=K,且a+b尽量小</span><br><span class="line"></span><br><span class="line">数据范围：n, m &lt;= 10^9 k &lt;= n * m</span><br></pre></td></tr></table></figure>

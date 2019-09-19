@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/favicon.ico">
+    
+
+    <title>
+        
+          20190919笔试题 - 小白二号
+        
+    </title>
+
+    <!-- Spectre.css framework (v0.5.8) -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <!-- Noto Sans SC -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet">
+    <!-- Noto Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <!-- theme css & js -->
+    <link rel="stylesheet" href="/css/spectre_custom.css">
+    <link rel="stylesheet" href="/css/book.css">
+    <script src="/js/book.js"></script>
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+</head>
+
+<body>
+
+<div class="container">
+  <div class="book-container">
+    <div class="columns">
+      <div class="column col-2 hide-lg">
+        <div class="book-sidebar-wraper">
+  <img src="http://47.244.46.64:8001/1.png" style="display: none"/>
+  <div class="book-sidebar">
+    <h4 class="site-meta">
+      <a href="/">小白二号</a>
+    </h4>
+    <div class="sidebar-content">
+      <ul>
+<li><a href="/">首页</a></li>
+<li>算法
+<ul>
+<li><a href="/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF">动态规划解题思路</a></li>
+<li><a href="/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92">动态规划</a></li>
+<li><a href="/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2">记忆化搜索</a></li>
+<li><a href="/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F">拓扑排序</a></li>
+<li><a href="/%E7%90%86%E8%A7%A3%E9%80%92%E5%BD%92">理解递归</a></li>
+<li><a href="/%E7%90%86%E8%A7%A3%E5%87%BD%E6%95%B0">理解函数</a></li>
+</ul>
+</li>
+<li>大数据
+<ul>
+<li><a href="/hostname%E7%9A%84%E9%97%AE%E9%A2%98">hostname的问题</a></li>
+<li><a href="/hadoop%E6%90%AD%E5%BB%BA%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94ssh%E9%97%AE%E9%A2%98">hadoop搭建入门——ssh问题</a></li>
+<li><a href="/%E7%94%A8mapreduce%E5%AE%9E%E7%8E%B0join">用mapreduce实现join</a></li>
+<li><a href="/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%BB%E5%8A%A1%E5%88%86%E5%8F%91%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98">分布式任务分发引发的问题</a></li>
+<li><a href="/%E5%A4%9A%E7%BB%B4%E6%9F%A5%E8%AF%A2%E7%9A%84%E4%B8%80%E7%A7%8D%E5%AE%9E%E7%8E%B0cube%E5%8C%96">多维查询的一种实现cube化</a></li>
+</ul>
+</li>
+<li>笔试题
+<ul>
+<li><a href="/20190917%E7%AC%94%E8%AF%95%E9%A2%98">20190917笔试题</a></li>
+<li><a href="/20190916%E7%AC%94%E8%AF%95%E9%A2%98">20190916笔试题</a></li>
+<li><a href="/20190915%E7%AC%94%E8%AF%95%E9%A2%98">20190915笔试题</a></li>
+</ul>
+</li>
+<li>草稿</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<script src="/js/book-sidebar.js"></script>
+      </div>
+
+      <div class="column col-10 col-lg-12">
+        <div class="book-content">
+          <div class="book-navbar">
+  <header class="navbar">
+  <section class="navbar-section">
+    <img class="navbar-icon" src="/favicon.ico">
+  </section>
+  <section class="navbar-center">
+    小白二号
+  </section>
+  <section class="navbar-section">
+    <label class="accordion-header c-hand" for="accordion-sidebar">
+      <i class="icon icon-menu"></i>
+    </label>
+  </section>
+</header>
+
+<div class="accordion">
+  <input type="checkbox" id="accordion-sidebar" name="accordion-checkbox" hidden>
+  <div class="accordion-body">
+    <ul>
+<li><a href="/">首页</a></li>
+<li>算法
+<ul>
+<li><a href="/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF">动态规划解题思路</a></li>
+<li><a href="/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92">动态规划</a></li>
+<li><a href="/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2">记忆化搜索</a></li>
+<li><a href="/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F">拓扑排序</a></li>
+<li><a href="/%E7%90%86%E8%A7%A3%E9%80%92%E5%BD%92">理解递归</a></li>
+<li><a href="/%E7%90%86%E8%A7%A3%E5%87%BD%E6%95%B0">理解函数</a></li>
+</ul>
+</li>
+<li>大数据
+<ul>
+<li><a href="/hostname%E7%9A%84%E9%97%AE%E9%A2%98">hostname的问题</a></li>
+<li><a href="/hadoop%E6%90%AD%E5%BB%BA%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94ssh%E9%97%AE%E9%A2%98">hadoop搭建入门——ssh问题</a></li>
+<li><a href="/%E7%94%A8mapreduce%E5%AE%9E%E7%8E%B0join">用mapreduce实现join</a></li>
+<li><a href="/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%BB%E5%8A%A1%E5%88%86%E5%8F%91%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98">分布式任务分发引发的问题</a></li>
+<li><a href="/%E5%A4%9A%E7%BB%B4%E6%9F%A5%E8%AF%A2%E7%9A%84%E4%B8%80%E7%A7%8D%E5%AE%9E%E7%8E%B0cube%E5%8C%96">多维查询的一种实现cube化</a></li>
+</ul>
+</li>
+<li>笔试题
+<ul>
+<li><a href="/20190917%E7%AC%94%E8%AF%95%E9%A2%98">20190917笔试题</a></li>
+<li><a href="/20190916%E7%AC%94%E8%AF%95%E9%A2%98">20190916笔试题</a></li>
+<li><a href="/20190915%E7%AC%94%E8%AF%95%E9%A2%98">20190915笔试题</a></li>
+</ul>
+</li>
+<li>草稿</li>
+</ul>
+
+  </div>
+</div>
+</div>
+
+<div class="content-title">
+  <div class="title">
+    20190919笔试题
+  </div>
+</div>
+
+<div class="book-post">
+  <h4 id="滴滴1">滴滴1</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">沿着长N米，宽1米的走廊，连续铺有n块变长为1米的正方形地砖。假设所有颜色分为26种，用小写字母a到z表示，给定n种地砖的初始颜色，每次可以选择一种颜色，然后将最多M块连续的地砖染成该颜色。那么至少要进行多少次染色，才能将所有地砖染成同一颜色？</span><br><span class="line"></span><br><span class="line">数据范围，1&lt;=m&lt;=n&lt;=10^4</span><br></pre></td></tr></table></figure>
+<p>标签：贪心</p>
+<h4 id="滴滴2-垃圾分类">滴滴2(垃圾分类)</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">最近很多城市都搞起了垃圾分类，已知有一个小区有n堆垃圾需要丢弃，这些垃圾都打包了，我们并不知道这是什么垃圾，要知道有些垃圾如果丢在一起时会影响环境的。这个小区一共只有两辆垃圾车，出于合理负载的考量，要求两辆车必须装载相同数量的垃圾。我们希望在不影响环境的情况下，每次让垃圾车载走最多的垃圾。</span><br><span class="line">我们为垃圾袋标了号，分别是1-n，有m个约束，每个约束表示“a b”，意思是第a堆垃圾与第b堆垃圾不能装载一辆垃圾车上。（每堆垃圾最多有两个约束条件）</span><br><span class="line">请问两辆垃圾车一次最多可以带走多少堆垃圾呢？</span><br><span class="line">数据范围：1&lt;=n,m&lt;=500</span><br></pre></td></tr></table></figure>
+<p>标签：并查集，dfs</p>
+<h4 id="滴滴3">滴滴3</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">某工厂有n名工人和m台机器，每名工人都有一个能力值，且只懂得操作其中某两台机器。另外，每名工人最多只允许操作一台机器，且每台机器最多只允许被一名工人操作。那么如何分配每名工人操作哪台机器（或者不操作机器），才能让所有操作机器的工人的能力值总和最大？</span><br><span class="line">数据范围：1&lt;=n,m&lt;=10^5</span><br></pre></td></tr></table></figure>
+<p>标签：未知</p>
+<h4 id="微众1">微众1</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">一般来说，一个国家级景区，都包含着很多的经典，在这些经典之间，有着很多条路，任意两个景点之间，可能有很多条不重复经过某一景点的道路可以到达。有一位强迫症患者取游览某景区，这个景区有n个景点，编号为1-n，入口在s景点，出口在t景点，景区中有m条路径连接着某两个经典，它通过某些道路从s走向t，但是因为强迫症的缘故，他不希望重复经过某个景点，这就注定了有些景点它是不可能到达的。请问这样的景点有多少个？</span><br><span class="line">数据范围：n&lt;=100</span><br></pre></td></tr></table></figure>
+<p>标签：bfs</p>
+<h4 id="微众2-求询问次数">微众2(求询问次数)</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Alice现在有一个数x，在范围[0,2^n]内，你需要询问Alice一些问题，每次询问有一个数t，Alice会回答你t&amp;x是否等于t，你不能根据已有的回答改变接下来的询问（即询问需要提前想好）。你有多少种方法，使得你能保证确定x的值，并且询问的次数最少？输出答案对10^6+3求模</span><br><span class="line"></span><br><span class="line">数据范围n &lt;= 10^9</span><br></pre></td></tr></table></figure>
+<p>标签：基础数论</p>
+
+</div>
+
+
+  <div class="book-comments">
+    
+
+
+  </div>
+
+
+<script src="/js/book-post.js"></script>
+        </div>
+      </div>
+
+      <!-- <div class="column col-2 hide-lg">
+        <div class="book-toc">
+  <div class="book-tocbot">
+  </div>
+  <div class="book-tocbot-menu">
+    <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
+    <a onclick="go_top()">Back to top</a>
+    <a onclick="go_bottom()">Go to bottom</a>
+  </div>
+</div>
+
+<script>
+tocbot.init({
+  tocSelector: '.book-tocbot',
+  contentSelector: '.book-post',
+  headingSelector: 'h1, h2, h3, h4, h5',
+  collapseDepth: 2,
+  orderedList: false,
+  scrollSmooth: false,
+});
+
+function expand_toc(){
+  var b = document.querySelector(".book-toc-expand");
+  tocbot.init({
+    tocSelector: '.book-tocbot',
+    contentSelector: '.book-post',
+    headingSelector: 'h1, h2, h3, h4, h5',
+    collapseDepth: 6,
+    orderedList: false,
+    scrollSmooth: false,
+  });
+  b.setAttribute("onclick", "collapse_toc()");
+  b.innerHTML = "Collapse all"
+}
+
+function collapse_toc(){
+  var b = document.querySelector(".book-toc-expand");
+  tocbot.init({
+    tocSelector: '.book-tocbot',
+    contentSelector: '.book-post',
+    headingSelector: 'h1, h2, h3, h4, h5',
+    collapseDepth: 2,
+    orderedList: false,
+    scrollSmooth: false,
+  });
+  b.setAttribute("onclick", "expand_toc()");
+  b.innerHTML = "Expand all"
+}
+
+function go_top() {
+  window.scrollTo(0, 0);
+}
+
+function go_bottom() {
+  window.scrollTo(0, document.body.scrollHeight);
+}
+
+</script>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

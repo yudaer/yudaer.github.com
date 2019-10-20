@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/favicon.ico">
+    
+
+    <title>
+        
+          递归转非递归 - 小白二号
+        
+    </title>
+
+    <!-- Spectre.css framework (v0.5.8) -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <!-- Noto Sans SC -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet">
+    <!-- Noto Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <!-- theme css & js -->
+    <link rel="stylesheet" href="/css/spectre_custom.css">
+    <link rel="stylesheet" href="/css/book.css">
+    <script src="/js/book.js"></script>
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+</head>
+
+<body>
+
+<div class="container">
+  <div class="book-container">
+    <div class="columns">
+      <div class="column col-2 hide-lg">
+        <div class="book-sidebar-wraper">
+  <img src="http://47.244.46.64:8001/1.png" style="display: none"/>
+  <div class="book-sidebar">
+    <h4 class="site-meta">
+      <a href="/">小白二号</a>
+    </h4>
+    <div class="sidebar-content">
+      <ul>
+<li><a href="/">首页</a></li>
+<li>算法
+<ul>
+<li><a href="/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF">动态规划解题思路</a></li>
+<li><a href="/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92">动态规划</a></li>
+<li><a href="/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2">记忆化搜索</a></li>
+<li><a href="/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F">拓扑排序</a></li>
+<li><a href="/%E7%90%86%E8%A7%A3%E9%80%92%E5%BD%92">理解递归</a></li>
+<li><a href="/%E7%90%86%E8%A7%A3%E5%87%BD%E6%95%B0">理解函数</a></li>
+</ul>
+</li>
+<li>大数据
+<ul>
+<li><a href="/hostname%E7%9A%84%E9%97%AE%E9%A2%98">hostname的问题</a></li>
+<li><a href="/hadoop%E6%90%AD%E5%BB%BA%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94ssh%E9%97%AE%E9%A2%98">hadoop搭建入门——ssh问题</a></li>
+<li><a href="/%E7%94%A8mapreduce%E5%AE%9E%E7%8E%B0join">用mapreduce实现join</a></li>
+<li><a href="/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%BB%E5%8A%A1%E5%88%86%E5%8F%91%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98">分布式任务分发引发的问题</a></li>
+<li><a href="/%E5%A4%9A%E7%BB%B4%E6%9F%A5%E8%AF%A2%E7%9A%84%E4%B8%80%E7%A7%8D%E5%AE%9E%E7%8E%B0cube%E5%8C%96">多维查询的一种实现cube化</a></li>
+</ul>
+</li>
+<li>未分类
+<ul>
+<li><a href="/%E7%90%86%E8%A7%A3sql">理解sql</a></li>
+</ul>
+</li>
+<li>草稿</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<script src="/js/book-sidebar.js"></script>
+      </div>
+
+      <div class="column col-10 col-lg-12">
+        <div class="book-content">
+          <div class="book-navbar">
+  <header class="navbar">
+  <section class="navbar-section">
+    <img class="navbar-icon" src="/favicon.ico">
+  </section>
+  <section class="navbar-center">
+    小白二号
+  </section>
+  <section class="navbar-section">
+    <label class="accordion-header c-hand" for="accordion-sidebar">
+      <i class="icon icon-menu"></i>
+    </label>
+  </section>
+</header>
+
+<div class="accordion">
+  <input type="checkbox" id="accordion-sidebar" name="accordion-checkbox" hidden>
+  <div class="accordion-body">
+    <ul>
+<li><a href="/">首页</a></li>
+<li>算法
+<ul>
+<li><a href="/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF">动态规划解题思路</a></li>
+<li><a href="/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92">动态规划</a></li>
+<li><a href="/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2">记忆化搜索</a></li>
+<li><a href="/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F">拓扑排序</a></li>
+<li><a href="/%E7%90%86%E8%A7%A3%E9%80%92%E5%BD%92">理解递归</a></li>
+<li><a href="/%E7%90%86%E8%A7%A3%E5%87%BD%E6%95%B0">理解函数</a></li>
+</ul>
+</li>
+<li>大数据
+<ul>
+<li><a href="/hostname%E7%9A%84%E9%97%AE%E9%A2%98">hostname的问题</a></li>
+<li><a href="/hadoop%E6%90%AD%E5%BB%BA%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94ssh%E9%97%AE%E9%A2%98">hadoop搭建入门——ssh问题</a></li>
+<li><a href="/%E7%94%A8mapreduce%E5%AE%9E%E7%8E%B0join">用mapreduce实现join</a></li>
+<li><a href="/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%BB%E5%8A%A1%E5%88%86%E5%8F%91%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98">分布式任务分发引发的问题</a></li>
+<li><a href="/%E5%A4%9A%E7%BB%B4%E6%9F%A5%E8%AF%A2%E7%9A%84%E4%B8%80%E7%A7%8D%E5%AE%9E%E7%8E%B0cube%E5%8C%96">多维查询的一种实现cube化</a></li>
+</ul>
+</li>
+<li>未分类
+<ul>
+<li><a href="/%E7%90%86%E8%A7%A3sql">理解sql</a></li>
+</ul>
+</li>
+<li>草稿</li>
+</ul>
+
+  </div>
+</div>
+</div>
+
+<div class="content-title">
+  <div class="title">
+    递归转非递归
+  </div>
+</div>
+
+<div class="book-post">
+  <p>在这个文章中，将模拟递归在系统中运行的过程，一来帮助大家对递归理解更深入一些，二来在关键时候，可以规避递归栈的限制。</p>
+<p>上次文章说过，递归就是多重函数调用，函数将自己的运行状态保存起来，然后转而去调用其他函数去了，等到函数返回继续在原地执行。</p>
+<p>假设说你要修电脑，先要用螺丝刀把机箱给打开，然后。。。<br>
+等等，螺丝刀呢？没有螺丝刀咋办，买呗，于是你就把电脑丢下，跑出去买了一个螺丝刀<br>
+买回来之后，继续把机箱打开，发现内存条坏了，于是你就把电脑丢下，跑出去买了一个内存条（这里有个细节，机箱你是打开的，有两种做法，一种是打开着的机箱丢在地上，等买完内存条再回来继续，一种是把打开着的机箱装回去，等买完内存条再回来重新拆）</p>
+<p>我们来看一个真实的递归例子，后序优先遍历（leetcode-145）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    dfs(root-&gt;left);</span><br><span class="line">    dfs(root-&gt;right);</span><br><span class="line">    visit(root); <span class="comment">//前中后序的代码就区别于visit(root)的位置，放在两个dfs前面就是前序，放在两个dfs之间就是中序，本质上没什么区别</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://yudaer.oss-cn-hangzhou.aliyuncs.com/pic/15.png" alt></p>
+<p>我们从代码层面上来解释上图的代码执行过程：</p>
+<ul>
+<li>执行节点1，需要先执行左节点，挂起，节点2进入待执行栈</li>
+<li>执行节点2，需要先执行左节点，挂起，节点2的左节点进入待执行栈</li>
+<li>栈顶元素是个null，弹出</li>
+<li>继续执行节点2，先前执行到左节点那个地方，继续，需要先执行右节点，挂起，节点2的右节点进入待执行栈</li>
+<li>栈顶元素是个null，弹出</li>
+<li>继续执行节点2，先前执行到右节点那个地方，继续，访问节点3，结束，弹出</li>
+<li>继续执行节点1，先前执行到左节点那个地方，继续，需要先执行右节点，挂起，节点3进入待执行栈</li>
+<li>执行节点3，需要先执行左节点，挂起，节点3的左节点进入待执行栈</li>
+<li>栈顶元素是个null，弹出</li>
+<li>执行执行节点3，先前执行到左节点那个地方，继续，需要先执行右节点，挂起，节点3的右节点进入待执行栈</li>
+<li>栈顶元素是个null，弹出</li>
+<li>继续执行节点3，先前执行到右节点那个地方，继续，访问节点3，结束，弹出</li>
+<li>继续执行节点1，先前执行到右节点那个地方，继续，访问节点1，结束，弹出</li>
+<li>栈为空，执行完毕</li>
+</ul>
+<p>理解完这个递归的过程后，我们的非递归代码就呼之欲出了</p>
+<ul>
+<li>定义一个数据类型，用来保存递归过程中的上下文，比如，各种临时变量，在递归的过程中，这些变量语言层面上帮我们解决了上下文保留，非递归版本我们需要自己保存</li>
+<li>分解递归函数代码，将需要递归调用函数的部分分开，变成步骤1，步骤2，。。。例如，上面的后续优先遍历，就分成3个步骤，1是从开头到递归调用左节点之前，2是调用左节点后，调用右节点之前，3是调用右节点之后。</li>
+</ul>
+<p>于是非递归版本的代码就是这样的：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Context</span> &#123;</span></span><br><span class="line">    TreeNode* root;</span><br><span class="line">    <span class="keyword">int</span> step;</span><br><span class="line">    Process(TreeNode* _root) &#123;</span><br><span class="line">        root = _root;</span><br><span class="line">        step = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">artidfs</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;Context&gt; <span class="built_in">stack</span>;</span><br><span class="line">    <span class="built_in">stack</span>.push_back(Context(root));</span><br><span class="line">    <span class="keyword">while</span> (!<span class="built_in">stack</span>.empty()) &#123;</span><br><span class="line">        <span class="keyword">int</span> last = <span class="built_in">stack</span>.size() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">stack</span>[last].root == <span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="comment">//对标dfs函数中第一行，root为空，直接返回</span></span><br><span class="line">            <span class="built_in">stack</span>.pop_back();</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">stack</span>[last].step == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">//处于第一个阶段中</span></span><br><span class="line">            <span class="built_in">stack</span>[last].step++;</span><br><span class="line">            <span class="built_in">stack</span>.push_back(Context(<span class="built_in">stack</span>[last].root-&gt;left));</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">stack</span>[last].step == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="comment">//处于第二个阶段</span></span><br><span class="line">            <span class="built_in">stack</span>[last].step++;</span><br><span class="line">            <span class="built_in">stack</span>.push_back(Context(<span class="built_in">stack</span>[last].root-&gt;right));</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">//处于第三个阶段</span></span><br><span class="line">            visit(Context(<span class="built_in">stack</span>[last].root));</span><br><span class="line">            <span class="built_in">stack</span>.pop_back();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个代码基本上是通用的，大家可以尝试着改写其他递归代码，可以加深对递归的理解。</p>
+<p>大家理解完这个代码后，再思考下为啥语言中有递归栈层数和递归中内存使用的限制。</p>
+
+</div>
+
+
+  <div class="book-comments">
+    
+
+
+  </div>
+
+
+<script src="/js/book-post.js"></script>
+        </div>
+      </div>
+
+      <!-- <div class="column col-2 hide-lg">
+        <div class="book-toc">
+  <div class="book-tocbot">
+  </div>
+  <div class="book-tocbot-menu">
+    <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
+    <a onclick="go_top()">Back to top</a>
+    <a onclick="go_bottom()">Go to bottom</a>
+  </div>
+</div>
+
+<script>
+tocbot.init({
+  tocSelector: '.book-tocbot',
+  contentSelector: '.book-post',
+  headingSelector: 'h1, h2, h3, h4, h5',
+  collapseDepth: 2,
+  orderedList: false,
+  scrollSmooth: false,
+});
+
+function expand_toc(){
+  var b = document.querySelector(".book-toc-expand");
+  tocbot.init({
+    tocSelector: '.book-tocbot',
+    contentSelector: '.book-post',
+    headingSelector: 'h1, h2, h3, h4, h5',
+    collapseDepth: 6,
+    orderedList: false,
+    scrollSmooth: false,
+  });
+  b.setAttribute("onclick", "collapse_toc()");
+  b.innerHTML = "Collapse all"
+}
+
+function collapse_toc(){
+  var b = document.querySelector(".book-toc-expand");
+  tocbot.init({
+    tocSelector: '.book-tocbot',
+    contentSelector: '.book-post',
+    headingSelector: 'h1, h2, h3, h4, h5',
+    collapseDepth: 2,
+    orderedList: false,
+    scrollSmooth: false,
+  });
+  b.setAttribute("onclick", "expand_toc()");
+  b.innerHTML = "Expand all"
+}
+
+function go_top() {
+  window.scrollTo(0, 0);
+}
+
+function go_bottom() {
+  window.scrollTo(0, document.body.scrollHeight);
+}
+
+</script>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
